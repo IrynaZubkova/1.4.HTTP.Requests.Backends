@@ -1,0 +1,107 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid rgba(255, 223, 34, 0.85);
+    padding: 8px;
+    text-align: left;
+    font-family: Domine, serif;
+}
+th {
+    background-color: rgb(255, 236, 134);
+}
+th:first-child, td:first-child {
+    text-align: center;
+}
+td {
+    background-color: #ddf6ef;
+    color: #685957;
+}
+tr:hover td {
+    background-color: #6dd854;
+}
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.input-wrapper {
+    margin-bottom: 10px;
+}
+.invalid {
+    border: 2px solid red;
+}
+.add-btn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+}
+#modalFormContainer {
+     display: none;
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.4);
+ }
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+.modalProducts {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}

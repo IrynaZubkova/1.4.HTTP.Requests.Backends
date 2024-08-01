@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataTable</title>
+    <link rel="stylesheet" href="Task1.css">
+</head>
+<body>
+<div id="usersTableContainer">
+    <button id="addUserBtn">Додати користувача</button>
+    <div id="usersTable"></div>
+</div>
+<div id="productsTableContainer">
+    <button id="addProductBtn">Додати продукт</button>
+    <div id="productsTable"></div>
+</div>
+
+
+<!-- Модальне вікно "Додати користувача" -->
+<div id="modalFormContainer" class="modalUsr">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalFormContainer')">&times;</span>
+        <form id="userForm" class="modal-form">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="surname">Прізвище:</label>
+            <input type="text" id="surname" name="surname" required>
+            <br>
+            <label for="birthday">Дата народження:</label>
+            <input type="date" id="birthday" name="birthday" required>
+            <br>
+            <label for="avatar">Посилання на аватар:</label>
+            <input type="url" id="avatar" name="avatar" required>
+            <br>
+            <button id="submitUser" type="submit">Додати користувача</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- Модальне вікно "Додати продукт" -->
+<div id="productModalFormContainer" class="modalProducts">
+    <span class="close" onclick="closeModal('productModalFormContainer')">&times;</span>
+    <form id="productForm">
+        <label for="title">Назва:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="price">Ціна:</label>
+        <input type="number" id="price" name="price" required>
+        <br>
+        <label for="currency">Валюта:</label>
+        <select id="currency" name="currency">
+            <option value="$">Долари</option>
+            <option value="€">Євро</option>
+            <option value="₴">Гривні</option>
+        </select>
+        <br>
+        <label for="color">Колір:</label>
+        <input type="color" id="color" name="color" required>
+        <br>
+        <button id="submitProduct" type="submit">Додати</button>
+
+    </form>
+</div>
+
+
+<script src="Task1.js"></script>
+</body>
+</html>
