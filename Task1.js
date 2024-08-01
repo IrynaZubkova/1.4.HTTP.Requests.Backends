@@ -68,10 +68,10 @@ function initializeDataTable(config) {
         console.error(`Element ${config.parent} not found`);
         return;
     }
-    console.log(`Initializing data table for ${config.parent} with API URL:`, config.apiUrl); // Додано для перевірки
+    console.log(`Initializing data table for ${config.parent} with API URL:`, config.apiUrl); 
     fetchData(config.apiUrl)
         .then(data => {
-            console.log(`Parsed Data for ${config.parent}:`, data); // Додано для перевірки
+            console.log(`Parsed Data for ${config.parent}:`, data); 
             createTable(parentElement, data, config.columns, config.apiUrl);
         })
         .catch(error => {
@@ -244,7 +244,6 @@ const handleSubmitUserForm = async (event) => {
         return;
     }
     try {
-        // Відправити дані на сервер (приклад URL)
         const response = await fetch('https://mock-api.shpp.me/%3Cizubkova%3E/users', {
             method: 'POST',
             headers: {
@@ -349,7 +348,8 @@ const handleSubmitProductForm = async (event) => {
         alert('Новий товар успішно додано!');
     } catch (error) {
         console.error('Помилка додавання нового товару:', error.message);
-        alert(`Під час додавання нового товару виникла помилка. Будь ласка, спробуйте ще раз. Подробиці помилки: ${error.message}`);
+        alert(`Під час додавання нового товару виникла помилка. 
+        Будь ласка, спробуйте ще раз. Подробиці помилки: ${error.message}`);
     }
 };
 
@@ -436,7 +436,7 @@ const config2 = {
         },
         {
             title: 'Колір',
-            value: (product) => getColorLabel(product.color), // функцію getColorLabel вам потрібно створити
+            value: (product) => getColorLabel(product.color), 
             input: { type: 'color', name: 'color' }
         },
         {
